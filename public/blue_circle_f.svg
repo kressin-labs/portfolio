@@ -1,0 +1,14 @@
+<svg width="100%" height="100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="8" cy="8" r="8" fill="#0056B3"/>
+  
+  <text 
+    x="8" 
+    y="8.8" 
+    font-family="Arial, sans-serif" 
+    font-size="16" 
+    font-weight="normal" 
+    fill="white" 
+    text-anchor="middle" 
+    dominant-baseline="central"
+  >F</text>
+</svg>
