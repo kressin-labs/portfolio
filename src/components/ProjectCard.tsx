@@ -21,7 +21,7 @@ export default function ProjectCard({ project }: any) {
       {project.url && (
         <a
           href={project.url}
-          target="_blank"
+          // target="_blank"
           className="text-blue-600 underline mt-3 block"
           rel="noopener noreferrer"
         >

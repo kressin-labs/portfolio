@@ -15,12 +15,11 @@ export default function ProjectDetail() {
   return (
     <Container>
       <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
-      {/* Conditionally render the URL if it exists in your project data */}
       {project.url && (
         <a 
           href={project.url} 
-          target="_blank" 
-          rel="noopener noreferrer" 
+          // target="_blank" 
+          // rel="noopener noreferrer" 
           className="text-blue-600 underline mb-2 block"
         >
           View Live Project
@@ -28,7 +27,6 @@ export default function ProjectDetail() {
       )}
       <p className="text-gray-700 mb-6">{project.description}</p>
       
-      {/* Note: project.content is already a valid ReactNode */}
       <div className="prose max-w-none"> 
         {project.content}
       </div>

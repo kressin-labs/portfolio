@@ -48,7 +48,7 @@ const projects = [
 
         <a
           href="https://inventory.fabiankressin.com"
-          target="_blank"
+          // target="_blank"
           className="text-blue-600 underline font-medium"
         >
           👉 Visit the live app
