@@ -1,73 +1,35 @@
-# React + TypeScript + Vite
+# Fabian Kreßin - Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository hosts the source code for a personal portfolio website, which showcases skills, experience, and projects as a Software Engineer.
 
-Currently, two official plugins are available:
+## Technologies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The frontend is built using modern web development tools:
 
-## React Compiler
+* **Framework:** React (using `react-router-dom` for routing)
+* **Styling:** Tailwind CSS
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## Structure & Content
 
-## Expanding the ESLint configuration
+The portfolio is structured to provide a professional profile and an overview of technical work.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Home Page (`/`)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The main page serves as a landing area, featuring:
+* **Profile** 
+* **Expertise** 
+* **Learning Focus** 
+* **Navigation** 
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Projects Page (`/projects`)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This section details my current and upcoming technical work.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+| Project Slug | Title | Description | Status | Key Technologies/Details |
+| :--- | :--- | :--- | :--- | :--- |
+| `inventory-app` | **Inventory Management App** | Full-stack inventory system with role-based authentication and product management. | In development / Live | React, Next.js, Spring Boot, JWT, Context Providers. |
+| `cp-scheduling-solver` | **CP-SAT Scheduling Solver** | Advanced multi-objective scheduling engine. | Upcoming | OR-Tools. |
+| `gaussian-splatting-viewer` | **Gaussian Splatting 3D Viewer** | Real-time 3D rendering viewer. | Upcoming | Three.js / SparkJS. |
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+**Upcoming Features:**
+An admin panel (for internal use only) and a monitoring dashboard.
