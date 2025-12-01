@@ -33,8 +33,8 @@ const projects = [
     content: (
       <div className="space-y-4">
         <p>
-          A full-stack application built with React, Next.js, and Spring Boot, featuring user authentication,
-          admin tools, product management.
+          A full-stack application built with <strong>React, Vite</strong>, and Spring Boot, featuring user authentication,
+          admin tools, and product management.
         </p>
 
         <ul className="list-disc ml-6 space-y-2">
@@ -42,17 +42,32 @@ const projects = [
           <li>Product management (create, delete, edit inventory levels)</li>
           <li>Shopping cart with quantity controls (1–5 per product)</li>
           <li>Batch purchasing of all items in the cart</li>
-          <li>Backend implemented using Spring Boot + JWT authentication</li>
-          <li>Frontend state management via React context providers</li>
+          <li>Backend implemented using Spring Boot + <strong>JWT authentication</strong></li>
+          <li>Frontend state management via <strong>custom React context providers</strong></li>
         </ul>
 
         <a
           href="https://inventory.fabiankressin.com"
-          // target="_blank"
           className="text-blue-600 underline font-medium"
         >
           👉 Visit the live app
         </a>
+      </div>
+    ),
+  },
+  {
+    slug: "wt-portgame",
+    title: "Unity to Godot Porting",
+    description: "Analysis and porting of a prototype open-world game from Unity (C#) to Godot Engine.",
+    content: (
+      <div className="space-y-4">
+        <p>
+          Academic project analyzing the capabilities and challenges of migrating a prototype open-world game
+          developed in Unity (using C#) to the Godot Engine (using GDScript).
+        </p>
+        <p>
+          Live demo not deployed yet.
+        </p>
       </div>
     ),
   },

@@ -1,20 +1,34 @@
 import Container from "@/components/Container";
 
 export default function CVPage() {
+  const contactInfo = [
+    { label: 'Email', value: 'contact@fabiankressin.com', href: 'mailto:contact@fabiankressin.com' },
+    { label: 'LinkedIn', value: 'linkedin.com/in/fabiankressin', href: 'https://linkedin.com/in/fabiankressin' },
+    { label: 'GitHub', value: 'github.com/fabiankressin', href: 'https://github.com/fabiankressin' },
+  ];
+
   return (
     <Container>
-      {/* Header/Contact Information (Add contact links for completeness?) */}
+      {/* Header/Contact Information */}
       <header className="mb-10 p-4 border-b-4 border-indigo-700 bg-gray-50 rounded-md">
         <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight mb-1">Fabian Kreßin</h1>
-        <p className="text-lg text-gray-600 mb-4">Software Engineer focused on Optimization and Algorithm Design</p>
+        <p className="text-lg text-gray-600 mb-2">Software Engineer focused on Optimization and Algorithm Design</p>
 
-
+        {/* Contact Links */}
+        <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-gray-600 mt-2">
+          {contactInfo.map((item) => (
+            <a key={item.label} href={item.href} target="_blank" rel="noopener noreferrer" className="hover:text-indigo-700 underline transition-colors">
+              {item.value}
+            </a>
+          ))}
+        </div>
       </header>
 
       {/* Education */}
       <section className="mb-10">
         <h2 className="text-3xl font-bold text-indigo-700 mb-4 border-b pb-2">Education</h2>
 
+        {/* Master's */}
         <div className="mb-6 border-l-4 border-gray-300 pl-4">
           <div className="flex justify-between items-start">
             <h3 className="text-xl font-semibold">Technische Universität Berlin</h3>
@@ -26,6 +40,7 @@ export default function CVPage() {
           </ul>
         </div>
 
+        {/* Bachelor's */}
         <div className="mb-6 border-l-4 border-gray-300 pl-4">
           <div className="flex justify-between items-start">
             <h3 className="text-xl font-semibold">Technische Universität Berlin</h3>
@@ -44,62 +59,61 @@ export default function CVPage() {
         </div>
       </section>
 
-      {/* Experience */}
+      {/* --- Experience --- */}
       <section className="mb-10">
         <h2 className="text-3xl font-bold text-indigo-700 mb-4 border-b pb-2">Experience</h2>
 
+        {/* Datalyze Solutions GmbH */}
         <div className="mb-6 border-l-4 border-gray-300 pl-4">
           <div className="flex justify-between items-start">
-            <h3 className="text-xl font-semibold">Python Developer (Part-time, Hybrid)</h3>
+            <h3 className="text-xl font-semibold">Software Engineer, Optimization & Data (Part-time) | Python</h3>
             <span className="text-sm font-medium text-gray-600">Apr 2024 – Present</span>
           </div>
           <p className="text-gray-700 mb-1">Datalyze Solutions GmbH — Berlin, Germany</p>
           <ul className="list-disc ml-6 mt-2 space-y-1 text-gray-800">
             <li><strong>Optimization:</strong> Designed and implemented algorithms for complex task-scheduling and resource-assignment problems.</li>
-            <li><strong>Core Development:</strong> Developed a high-performance CP-SAT solver using <strong>Google OR-Tools</strong>, including multi-goal optimization and preprocessing stages.</li>
+            <li><strong>Core Development:</strong> Developed a high-performance <strong>CP-SAT solver</strong> using <strong>Google OR-Tools</strong>, including multi-goal optimization and preprocessing stages.</li>
             <li><strong>Quality Assurance:</strong> Created comprehensive test suites to verify functionality and evaluate solver performance.</li>
             <li><strong>Tooling:</strong> Set up and configured tools for computing and visualizing 3D models derived from video or picture collections.</li>
           </ul>
         </div>
 
+        {/* Teaching Assistant */}
         <div className="mb-6 border-l-4 border-gray-300 pl-4">
           <div className="flex justify-between items-start">
-            <h3 className="text-xl font-semibold">Teaching Assistant</h3>
+            <h3 className="text-xl font-semibold">Teaching Assistant (Part-time)</h3>
             <span className="text-sm font-medium text-gray-600">Nov 2021 – Sep 2024</span>
           </div>
           <p className="text-gray-700 mb-1">Technische Universität Berlin — Berlin, Germany</p>
           <ul className="list-disc ml-6 mt-2 space-y-1 text-gray-800">
             <li>Assisted in teaching courses on linear algebra, digital circuit optimization, and computational complexity.</li>
             <li>Supervised tutorials, prepared, and graded exercises and exams.</li>
-            <li>Supported students in understanding advanced theoretical concepts.</li>
+            <li>Managed forums for further student questions.</li>
           </ul>
         </div>
       </section>
 
-      {/* Projects */}
+      {/* --- Projects */}
       <section className="mb-10">
         <h2 className="text-3xl font-bold text-indigo-700 mb-4 border-b pb-2">Selected Projects</h2>
 
-        {/* Inventory & Shopping App (In Progress) */}
         <div className="mb-6 pb-4 border-b border-gray-200">
-          {/* Note: changed header class for visual distinction */}
           <h3 className="text-xl font-semibold text-indigo-600">In Progress: Full-Stack Inventory & Shopping App</h3>
           <p className="text-sm font-medium text-gray-600 mt-1">
-            Technologies: React, Next.js, TypeScript, Spring Boot, Java, JWT Authentication
+            Technologies: React, Vite, TypeScript, Spring Boot, Java, JWT Authentication
           </p>
           <ul className="list-disc ml-6 mt-2 space-y-1 text-gray-800">
             <li>Building a full-stack inventory management system with user authentication and role-based access.</li>
-            <li>Developing a secure backend using <strong>Spring Boot</strong>, <strong>Spring Security</strong>, and JWT-based session handling.</li>
-            <li>Designing a modern frontend UI using <strong>React, Next.js</strong>, and global state management via custom providers.</li>
+            <li>Developing a secure backend using <strong>Spring Boot</strong> and <strong>JWT-based session handling</strong>.</li>
+            <li>Designing a modern frontend UI using <strong>React</strong> and <strong>Vite</strong> with global state management via custom providers.</li>
             <li>Implementing administrative and shopping features (product management, inventory adjustments, shopping cart).</li>
           </ul>
         </div>
 
-        {/* SemanticWeb Integration (Completed) */}
         <div className="mb-6 pb-4 border-b border-gray-200">
-          <h3 className="text-xl font-semibold">SemanticWeb Integration</h3>
-          <p className="text-sm font-medium text-indigo-600 mt-1">
-            Technologies: Java, JavaScript, Vue, W3C WoT
+          <h3 className="text-xl font-semibold text-indigo-600">Semantic Web Integration</h3>
+          <p className="text-sm font-medium text-gray-600 mt-1">
+            Technologies: Java, JavaScript, W3C WoT
           </p>
           <ul className="list-disc ml-6 mt-2 space-y-1 text-gray-800">
             <li>Developed a semantic data communication and storage system using <strong>W3C Web of Things (WoT)</strong> protocols.</li>
@@ -108,10 +122,9 @@ export default function CVPage() {
         </div>
 
 
-        {/* CI/CD & Deployment Infrastructure (Completed) */}
         <div className="pb-4">
-          <h3 className="text-xl font-semibold">CI/CD & Deployment Infrastructure</h3>
-          <p className="text-sm font-medium text-indigo-600 mt-1">
+          <h3 className="text-xl font-semibold text-indigo-600">CI/CD & Deployment Infrastructure</h3>
+          <p className="text-sm font-medium text-gray-600 mt-1">
             Technologies: Docker, GitHub Actions, Cloudflare, Caddy, VPS
           </p>
           <ul className="list-disc ml-6 mt-2 space-y-1 text-gray-800">
@@ -121,26 +134,24 @@ export default function CVPage() {
         </div>
       </section>
 
-      {/* Technical Skills - UPDATED */}
+      {/* --- Technical Skills --- */}
       <section className="mb-10">
         <h2 className="text-3xl font-bold text-indigo-700 mb-4 border-b pb-2">Technical Skills</h2>
         <div className="text-gray-800">
 
           <h3 className="text-xl font-semibold mt-4 mb-2">Core Competencies</h3>
           <p className="mb-2"><strong className="font-semibold text-gray-900 w-32 inline-block">Programming:</strong> Python, Java, Haskell</p>
-          <p className="mb-2"><strong className="font-semibold text-gray-900 w-32 inline-block">DevOps & Tools:</strong> Docker, Git, GitHub Actions, CI/CD, Caddy, Cloudflare, Unity</p>
-          <p><strong className="font-semibold text-gray-900 w-32 inline-block">Web Basics:</strong> HTML, CSS, HTTP APIs</p>
-          <p className="mb-2"><strong className="font-semibold text-gray-900 w-32 inline-block">Optimization:</strong> OR-Tools, Gurobi, Constraint Programming, Scheduling</p>
 
-          {/* VISUAL DIFFERENTIATION APPLIED HERE */}
-          <h3 className="text-xl font-semibold mt-6 mb-2 text-indigo-600">Currently Exploring</h3>
-          <p className="mb-2 text-sm italic text-gray-600">
-            <strong className="font-semibold w-32 inline-block text-gray-700">Focus Areas:</strong> JavaScript/TypeScript, React, Next.js, Spring Boot
-          </p>
-          <p className="mb-2 text-sm italic text-gray-600">
-            <strong className="font-semibold w-32 inline-block text-gray-700">Concepts:</strong> Advanced Frontend State Management, Modern Authentication Flows
-          </p>
+          <p className="mb-2"><strong className="font-semibold text-gray-900 w-32 inline-block">DevOps & Tools:</strong> Docker, Git, CI/CD (GitHub Actions), Caddy, Cloudflare, Unity</p>
 
+          <p className="mb-2"><strong className="font-semibold text-gray-900 w-32 inline-block">Optimization:</strong> OR-Tools (CP-SAT), Constraint Programming, Scheduling</p>
+
+          <p className="mb-2"><strong className="font-semibold text-gray-900 w-32 inline-block">Web Basics:</strong> HTML, CSS, HTTP APIs</p>
+
+          <h3 className="text-xl font-semibold mt-6 mb-2 text-indigo-600">Currently Exploring (Learning Focus)</h3>
+          <p className="mb-2 text-sm italic text-gray-600">
+            <strong className="font-semibold w-32 inline-block text-gray-700">Focus:</strong> JavaScript/TypeScript, React, Vite, Spring Boot, Modern Authentication Flows
+          </p>
         </div>
       </section>
 
