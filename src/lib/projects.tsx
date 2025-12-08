@@ -1,30 +1,30 @@
 import SplatViewer from "@/components/GaussianSplatting/SplatViewer.jsx";
 const projects = [
-  {
-    slug: "cp-scheduling-solver",
-    title: "CP-SAT Scheduling Solver (Upcoming)",
-    description: "Advanced multi-objective scheduling engine built with OR-Tools.",
-    content: (
-      <div>
-        <p>
-          Upcoming.
-        </p>
-      </div>
-    ),
-  },
-  {
-    slug: "gaussian-splatting-viewer",
-    title: "Gaussian Splatting 3D Viewer (Upcoming)",
-    description: "Real-time 3D splat viewer with Three.js / SparkJS.",
-    content: (
-      <div><p>Upcoming.</p>
-        <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
-          <SplatViewer />
-        </div>
-      </div>
+  // {
+  //   slug: "cp-scheduling-solver",
+  //   title: "CP-SAT Scheduling Solver (Upcoming)",
+  //   description: "Advanced multi-objective scheduling engine built with OR-Tools.",
+  //   content: (
+  //     <div>
+  //       <p>
+  //         Upcoming.
+  //       </p>
+  //     </div>
+  //   ),
+  // },
+  // {
+  //   slug: "gaussian-splatting-viewer",
+  //   title: "Gaussian Splatting 3D Viewer (Upcoming)",
+  //   description: "Real-time 3D splat viewer with Three.js / SparkJS.",
+  //   content: (
+  //     <div><p>Upcoming.</p>
+  //       <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
+  //         <SplatViewer />
+  //       </div>
+  //     </div>
 
-    ),
-  },
+  //   ),
+  // },
   {
     slug: "inventory-app",
     title: "Inventory Management App (In development)",
@@ -55,22 +55,22 @@ const projects = [
       </div>
     ),
   },
-  {
-    slug: "wt-portgame",
-    title: "Unity to Godot Porting",
-    description: "Analysis and porting of a prototype open-world game from Unity (C#) to Godot Engine.",
-    content: (
-      <div className="space-y-4">
-        <p>
-          Academic project analyzing the capabilities and challenges of migrating a prototype open-world game
-          developed in Unity (using C#) to the Godot Engine (using GDScript).
-        </p>
-        <p>
-          Live demo not deployed yet.
-        </p>
-      </div>
-    ),
-  },
+  // {
+  //   slug: "wt-portgame",
+  //   title: "Unity to Godot Porting",
+  //   description: "Analysis and porting of a prototype open-world game from Unity (C#) to Godot Engine.",
+  //   content: (
+  //     <div className="space-y-4">
+  //       <p>
+  //         Academic project analyzing the capabilities and challenges of migrating a prototype open-world game
+  //         developed in Unity (using C#) to the Godot Engine (using GDScript).
+  //       </p>
+  //       <p>
+  //         Live demo not deployed yet.
+  //       </p>
+  //     </div>
+  //   ),
+  // },
 
 ];
 
