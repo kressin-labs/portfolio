@@ -1,11 +1,6 @@
 import Container from "@/components/Container";
 
 export default function CVPage() {
-  const contactInfo = [
-    { label: 'Email', value: 'contact@fabiankressin.com', href: 'mailto:contact@fabiankressin.com' },
-    { label: 'LinkedIn', value: 'linkedin.com/in/fabiankressin', href: 'https://linkedin.com/in/fabiankressin' },
-    { label: 'GitHub', value: 'github.com/fabiankressin', href: 'https://github.com/fabiankressin' },
-  ];
 
   return (
     <Container>

@@ -1,4 +1,3 @@
-import SplatViewer from "@/components/GaussianSplatting/SplatViewer.jsx";
 const projects = [
   // {
   //   slug: "cp-scheduling-solver",
